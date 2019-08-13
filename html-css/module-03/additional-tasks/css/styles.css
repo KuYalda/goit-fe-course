@@ -1,0 +1,58 @@
+h1 {
+  color: #0000ff;
+  font-size: 84px;
+}
+p {
+  color: #ff0000;
+  background-color: #fabb00;
+  text-indent: 20px;
+}
+.thirdparagraphe {
+  color: green;
+  font-size: 36px;
+}
+.father a {
+  color: rgba(0, 0, 0, 0.5);
+}
+#notuse {
+  color: #000080;
+}
+p .socialnetwork:hover  {
+  color: #ff0000;
+}
+p a {
+  color: #00ff00;
+}
+.father .thirdparagraphe {
+  color: blueviolet;
+}
+.father a:hover {
+  color: aliceblue;
+}
+article.had h2 {
+  color: #000000;
+}
+body {
+  font-size: 30px;
+  font-weight: 400;
+  font-style: oblique;
+  text-decoration: underline;
+  line-height: 40px;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+.box {
+  height: 1200px;
+  width: 1600px;
+  background-color: #ff0000;
+/*   background-image: url("https://images.pexels.com/photos/2765872/pexels-photo-2765872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+.body {
+  min-height: 100vh;
+  min-width: 100vh;
+  background-image: url("https://images.pexels.com/photos/2765872/pexels-photo-2765872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
