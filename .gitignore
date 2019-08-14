@@ -1,4 +1,5 @@
 *.psd
 /*/*/additional-tasks/
+/**/additional-tasks/**
 tsync
 /normalize.css
