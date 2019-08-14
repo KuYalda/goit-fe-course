@@ -1,4 +1,4 @@
 *.psd
-additional-tasks/*
-Test GitHub sync/*
+/additional-tasks/*
+/Test GitHub sync/*
 /normalize.css
