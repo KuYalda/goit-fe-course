@@ -1,0 +1,159 @@
+/* Preliminary Styling */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Playfair Display", Arial, serif;
+    font-weight: 400;
+    color: #626262;
+    font-size: 0px;
+}
+
+.wrapper {
+    width: 901px;
+    margin: 0px auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Footer Styling */
+
+.navigation {
+    margin-bottom: 5px;
+    padding: 0px;
+}
+
+.main-navigation {
+    margin: 0px auto;
+    padding: 0px;
+    width: 574px;
+}
+
+.main-navigation ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-navigation-list li {
+    list-style: none;
+    display: inline-block;
+    padding: 50px 10px 50px 92px;
+}
+
+.main-navigation-list li:first-child {
+    padding-left: 0px;
+    padding-right: 24px;
+}
+
+.main-navigation-list li:last-child {
+    padding-right: 0px;
+}
+
+.main-navigation-link {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #626262;
+}
+
+.main-navigation-link:hover,
+.main-navigation-link:focus {
+    color: #03a9f4;
+}
+
+/* Main Content Styling */
+
+.main-content-list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-content-list li {
+    display: inline-block;
+    width: 420px;
+    margin-right: 60px;
+    margin-bottom: 130px;
+}
+
+.main-content-list li:nth-child(2n) {
+    margin-right: 0px;
+}
+
+.main-content-list li:nth-last-child(-n+3) {
+    margin-bottom: 54px;
+}
+
+.main-content-article {
+    font-size: 14px;
+}
+
+.main-content-image {
+    margin-bottom: 18px;
+}
+
+.main-content-image-discription {
+    margin: 0px;
+    text-transform: uppercase;
+    line-height: 17px;
+    color: #b4ad9e;
+    margin-bottom: 17px;
+}
+
+.main-content-article h2 {
+    margin: 0px;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 34px;
+}
+
+.main-content-article-text {
+    margin: 0px;
+    line-height: 24px;
+}
+
+/* Load Button Styling */
+
+.load-button {
+    display: block;
+    padding: 0px;
+    border: 1px solid #626262;
+    font-family: "Playfair Display", Arial, serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0px auto;
+    width: 164px;
+    height: 60px;
+}
+
+.load-button:hover,
+.load-button:focus {
+    color: #03a9f4;
+    border-color: #03a9f4;
+}
