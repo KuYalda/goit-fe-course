@@ -5,3 +5,5 @@ tsync
 *.png
 *.jpeg
 img
+/utility.css
+/utility.js
