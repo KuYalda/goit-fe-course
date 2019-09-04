@@ -142,6 +142,8 @@ input[type="radio"].visually-hidden {
 }
 
 .products-item {
+    width: 255px;
+    height: 322px;
     float: left;
     margin-right: 30px;
     font-size: 0px;
