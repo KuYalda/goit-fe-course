@@ -159,6 +159,8 @@ input[type="radio"].visually-hidden {
 
 .product-link {
     display: block;
+    width: 255px;
+    height: 322px;
     text-decoration: none;
     padding: 0px;
     margin: 0px;
