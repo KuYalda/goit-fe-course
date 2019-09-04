@@ -104,7 +104,8 @@ input[type="radio"].visually-hidden {
 
 /* SECTION HEADINGS*/
 
-h2 {
+.featured-products,
+.latest-news {
     text-align: center;
     font-size: 48px;
     text-transform: uppercase;
@@ -112,7 +113,8 @@ h2 {
     padding: 0px;
 }
 
-h2::after {
+.featured-products::after,
+.latest-news::after {
     content: "";
     display: block;
     width: 164px;
@@ -166,7 +168,15 @@ h2::after {
     background-color: #1abc9c;
 }
 
+.product-link:focus .product-name {
+    background-color: #1abc9c;
+}
+
 .product-link:hover .product-price {
+    background-color: #88f0db;    
+}
+
+.product-link:focus .product-price {
     background-color: #88f0db;    
 }
 
@@ -275,7 +285,7 @@ h2::after {
     margin-bottom: 12px;
 }
 
-button {
+.more-news {
     padding: 0;
     border: none;
     font: inherit;
