@@ -2,8 +2,5 @@
 **/additional-tasks
 tsync
 /normalize.css
-*.png
-*.jpeg
-img
 /utility.css
 /utility.js
