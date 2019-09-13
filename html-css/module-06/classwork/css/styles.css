@@ -15,6 +15,10 @@ img {
     margin: 0px auto;
 }
 
+main {
+    overflow: hidden;
+}
+
 /* TEAM LIST */
 
 .logo {
@@ -103,4 +107,78 @@ img {
     flex-grow: 1;
     flex-shrink: 5;
     order: 1;
+}
+
+/* ROCKET RANGER */
+
+.rocket__wrapper {
+    background: url(../img/rocket-solid-icon.png) no-repeat center;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 222;
+    animation: rocket 5s;
+    animation-fill-mode: forwards;
+}
+
+.rocket__ranger {
+    background: url(../img/custom-avatar.png);
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rocket {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    5% {
+        transform: translate(-50%, 50%);
+    }
+    6% {
+        transform: translate(-50%, 50%) rotate(20deg);
+    }
+    7% {
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+    8% {
+        transform: translate(-50%, 50%) rotate(-20deg);
+    }
+    9% {
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+    10% {
+        transform: translate(-50%, 50%) rotate(20deg);
+    }
+    11% {
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+    12% {
+        transform: translate(-50%, 50%) rotate(-20deg);
+    }
+    13% {
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+    14% {
+        transform: translate(-50%, 50%) rotate(20deg);
+    }
+    15% {
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+    30% {
+        transform: translate(-50%, 50%) rotate(45deg);
+    }
+    100% {
+        transform: translate(2000px, -3000px) rotate(45deg);
+    }
 }
