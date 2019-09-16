@@ -1,0 +1,101 @@
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+.clearfix::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+/* LIST WITH 6TH ELEMENTS */
+
+.menu {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.menu-item {
+    float: left;
+    margin-right: 20px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: grey;
+    padding: 5px;
+}
+
+.menu-link:hover {
+    color: red;
+}
+
+/* LIST WITH 9TH ELEMENTS */
+
+.list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+    color: #0E1116;
+}
+
+.list-item {
+    display: block;
+    padding: 20px;
+}
+
+.list-item:nth-child(3n+1) {
+    background-color: #88292F;
+}
+
+.list-item:nth-child(3n-1) {
+    background-color: #5DB7DE;
+}
+
+.list-item:nth-child(3n) {
+    background-color: #0D5D56;
+}
+
+/* 9TH LINKS WITH ::BEFORE */
+
+.nav {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-link::before {
+    content: "\003E";
+}
+
+/* TASK 4 */
+
+.coun {
+    counter-reset: licounter;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.coun-item::before {
+    display: inline-block;
+    counter-increment: licounter;
+    content: counter(licounter, upper-roman);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #ff0000;
+    border: 1px black;
+}

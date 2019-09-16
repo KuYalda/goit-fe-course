@@ -1,6 +1,6 @@
 *.psd
-**/additional-tasks
-**/classwork
+# **/additional-tasks
+# **/classwork
 tsync
 /utility.css
 /utility.js

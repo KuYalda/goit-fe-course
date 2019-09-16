@@ -1,0 +1,319 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Raleway, Arial, sans-serif;
+    color: #6c7279;
+    /* font-size: 0px; */
+    line-height: 21px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.page-header {
+    background-color: #3a3e64;
+    margin-bottom: 120px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25)
+}
+
+.site-nav {
+    padding: 38px 0px;
+}
+
+.site-navigation {
+    /* display: inline-block; */
+    /* width: 981px; */
+    /* text-align: right; */
+    float: right;
+    width: 600px;
+    font-size: 13px;
+    list-style: none;
+    line-height: 16px;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+    /* vertical-align: middle; */
+}
+
+.site-logo {
+    display: inline-block;
+    /* vertical-align: middle; */
+}
+
+.site-navigation a {
+    display: block;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* padding: 0px 30px 0px 30px; */
+}
+
+.site-navigation li {
+/*     display: inline-block;
+    margin-right: 60px;
+    margin-left: 60px; */
+    float: left;
+}
+
+.site-navigation li:not(:last-child) {
+    margin-right: 60px;
+}
+
+/* .site-navigation li:last-child {
+    margin-right: 0px;
+}
+ */
+
+.banner {
+    min-height: 600px;
+    margin-bottom: 120px;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.3), rgba(0, 0, 255, 0.3)), url("../img/nature-quotes-1557340276.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-image: linear-gradient(to right, #ff0000, #0000ff); */
+}
+
+.features {
+    margin-bottom: 120px;
+}
+
+.features-list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.features-list-item {
+    /* display: inline-block; */
+    /* margin-right: 30px; */
+    float: left;
+    width: 370px;
+    text-align: center;
+    margin-bottom: 74px;
+}
+
+.features-list-item::before {
+    content: "";
+    display: block;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 33px;
+}
+.icon-easy-cust::before {
+    background-image: url("../img/icon/easy-cust.png");
+}
+
+.icon-resp-redy::before {
+    background-image: url("../img/icon/resp-redy.png");
+}
+
+.icon-modern-design::before {
+    background-image: url("../img/icon/modern-design.png");
+}
+
+.icon-clean-code::before {
+    background-image: url("../img/icon/clean-code.png");
+}
+
+.icon-ready-ship::before {
+    background-image: url("../img/icon/ready-ship.png");
+}
+
+.icon-download-free::before {
+    background-image: url("../img/icon/download-free.png");
+}
+
+.features-list-item p {
+    font-size: 14px;
+}
+
+.features-list-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+.features-list-item:nth-child(3n-2) {
+    padding: 0px 28px 0px 48px;
+}
+
+.features-list-item:nth-child(3n-1) {
+    padding: 0px 38px 0px 38px;
+}
+
+.features-list-item:nth-child(3n) {
+    padding: 0px 48px 0px 28px;
+}
+
+.features-list-item:nth-last-child(-n+3) {
+    margin-bottom: 0px;
+}
+
+/* .features-list-item:nth-child(3n) {
+    margin-right: 0px;
+} */
+
+.features-list-item h3 {
+    color: #2d3033;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 21px;
+}
+
+.team {
+    margin-bottom: 120px;
+}
+
+.team-list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.team-list-item {
+    /* display: inline-block; */
+    width: 270px;
+    margin-right: 30px;
+    float: left;
+}
+
+.team-list-item:hover img {
+    filter: grayscale(0);
+}
+
+.team-list-item img {
+    filter: grayscale(1);
+}
+
+/* .team-list-item img:hover,
+.team-list-item img:focus {
+    filter: grayscale(0);
+} */
+
+.team-list-item:last-child {
+    margin: 0px;
+}
+
+.team-list-name {
+    font-size: 22px;
+    line-height: 26px;
+    color: #2d3033;
+}
+
+.team-list-occupation {
+    font-size: 13px;
+    line-height: 16px;
+    color: #e84545;
+    text-transform: uppercase;
+}
+
+.team-list-about {
+    font-size: 14px;
+}
+
+.team-list-socials {
+    list-style: none;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.team-list-socials li {
+    /* display: inline-block; */
+    float: left;
+    margin-right: 4px;
+}
+
+.team-list-socials li:last-child {
+    margin-right: 0px;
+}
+
+.team-list-socials a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e8ecee;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.team-list-socials a:hover,
+.team-list-socials a:focus {
+    background-color: #e84545;
+}
+
+.facebook-icon {
+    background-image: url("../img/facebook-icon.png");
+}
+
+.twitter-icon {
+    background-image: url("../img/twitter-icon.png");
+}
+
+.linkedin-icon {
+    background-image: url("../img/linkedin-icon.png");
+}
+
+.page-footer {
+    background-color: #3a3e64;
+    font-size: 14px;
+}
+
+.download-bootton {
+    border: none;
+    padding: 14px 82px;
+    margin: 0px;
+    background-color: #e84545;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 21px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+    color: #e84545;
+}
