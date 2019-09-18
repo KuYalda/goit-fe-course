@@ -1,0 +1,147 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* MY CONTENT */
+
+/* GENERAL STYLE */
+
+.container {
+    width: 940px;
+    margin: 0px auto;
+}
+
+/* HEADER */
+
+.main__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 54px;
+}
+
+.logo {
+    display: block;
+    /* fonts */
+}
+
+.nav__items {
+    display: flex;
+    justify-content: space-between;
+    width: 480px;
+}
+
+.nav__link {
+    display: block;
+    /* fonts */
+    font-size: 14px;
+    line-height: 41px;
+    padding: 41px 15px;
+}
+
+/* SERVICES CONTAINER */
+
+/* SECTION TITLE AND SUBTITLE */
+
+.section__title {
+    /* fonts */
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 75px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 3px;
+}
+
+.section__subtitle {
+    font-size: 16px;
+    line-height: 1.2;
+    font-style: italic;
+    color: #777777;
+    margin-bottom: 74px;
+}
+
+.section__title,
+.section__subtitle,
+.head__service,
+.discription__service {
+    text-align: center;
+}
+
+.our__services {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.our__service {
+    width: 280px;
+    margin-bottom: 120px;
+}
+
+.head__service {
+    font-size: 18px;
+    line-height: 75px;
+    margin-top: 70px;
+    color: #222222;
+}
+
+.discription__service {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #777777;
+}
+
+footer {
+    background-color: yellow;
+}
+.contact__us .section__title {
+    padding-top: 106px;
+    color: #ffffff;
+}
