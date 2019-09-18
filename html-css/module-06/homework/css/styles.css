@@ -233,7 +233,28 @@ body {
   flex-wrap: wrap;
 }
 
-.member__photo {
+.team__member {
+  position: relative;
+  min-width: 380px;
+}
+
+.team__member:hover .box__hover {
+  visibility: visible;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.team__member:hover .member__photo {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.bg__position {
+  background-color: #95e1d3;
+  width: 380px;
+  height: 470px;
   margin-bottom: 30px;
 }
 
@@ -256,6 +277,60 @@ body {
   font-style: italic;
   color: #999999;
   text-align: center;
+}
+
+/* HOOVER ON TEAM MEMBER */
+
+.box__hover {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 380px;
+  height: 470px;
+  background-image:
+    linear-gradient(0deg, rgba(240, 226, 144, 0.9) 0%, rgba(233, 138, 137, 0.9) 100%);
+  visibility: hidden;
+}
+
+.social__items {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item {
+  border-right: 1px solid #f38181;
+}
+
+.social__items .social__item:last-child {
+  border-right: 0px;
+}
+
+.social__link {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+.social__link:hover {
+  background-color: rgba(149, 225, 211);
+}
+
+.facebook {
+  background: url(".././img/deco-img/facebook.png") no-repeat 50% 50% rgba(252, 227, 138);
+}
+
+.twitter {
+  background: url(".././img/deco-img/twitter.png") no-repeat 50% 50% #fce38a;
+}
+
+.pinterest {
+  background: url(".././img/deco-img/pinterest.png") no-repeat 50% 50% #fce38a;
+}
+
+.instagram {
+  background: url(".././img/deco-img/instagram.png") no-repeat 50% 50% #fce38a;
 }
 
 /* FOOTER */
@@ -323,4 +398,8 @@ body {
   color: #ffffff;
   border: 0px;
   cursor: pointer;
+}
+
+*:hover {
+  transition: all .200ms linear;
 }
