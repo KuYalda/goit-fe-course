@@ -43,7 +43,7 @@
             <h4 class="section__subtitle">Proin iaculis purus consequat sem cure.</h4>
             <ul class="our__services">
                 <li class="our__service">
-                    <article class="service">
+                    <article class="service basket">
                         <h3 class="head__service">E-Commerce</h3>
                         <p class="discription__service">Proin iaculis purus consequat sem cure 
                                 digni ssim. Donec porttitora entum suscipit 
@@ -51,7 +51,7 @@
                     </article>
                 </li>
                 <li class="our__service">
-                    <article class="service">
+                    <article class="service laptop">
                         <h3 class="head__service">Responsive Web</h3>
                         <p class="discription__service">Proin iaculis purus consequat sem cure 
                                 digni ssim. Donec porttitora entum suscipit 
@@ -59,7 +59,7 @@
                     </article>
                 </li>
                 <li class="our__service">
-                    <article class="service">
+                    <article class="service locked">
                         <h3 class="head__service">Web Security</h3>
                         <p class="discription__service">Proin iaculis purus consequat sem cure 
                                 digni ssim. Donec porttitora entum suscipit 
@@ -72,15 +72,22 @@
 
     <!-- FORM FOR USER -->
 
-    <footer>
+    <footer class="footer">
         <form action="#" class="contact__us container">
             <h2 class="section__title">Contact Us</h2>
             <h4 class="section__subtitle">Proin iaculis purus consequat sem cure.</h4>
-            <input type="text" class="text__input">
-            <input type="text" class="text__input">
-            <input type="text" class="text__input">
-            <input type="text" class="text__input">
-            <input type="submit" class="send__button" value="Send Message">
+            <div class="form__blok">
+                <div class="first__blok">
+                    <input type="text" class="text__input" placeholder="Your Name *">
+                    <input type="text" class="text__input" placeholder="Your E-Mail *">
+                    <input type="text" class="text__input" placeholder="Subject">
+                </div>
+                <div class="last__blok">
+                    <textarea name="" id="" cols="30" rows="8" class="text__input big" placeholder="Your Message *"></textarea>
+                </div>
+            </div>
+                <button type="submit" class="send__button">Send Message</button>
+            
         </form>
     </footer>
     
