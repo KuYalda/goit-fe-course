@@ -1,0 +1,18 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+
+.svg {
+    width: 100px;
+    height: 100px;
+    transition: .15s ease-in-out;
+    cursor: pointer;
+    display: block;
+    margin: 0px auto;
+}
+
+.svg:hover {
+    fill: green;
+}
