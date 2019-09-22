@@ -361,13 +361,12 @@ header .container {
 
 @media (min-width: 940px) {
     header {
-        background: url(.././img/deco-img/top-bgi.png) no-repeat;
-        padding: 36px 0px 226px;
+        background: url(.././img/deco-img/top-bgi.png) no-repeat center;
     }
 
     header .container {
         background: none;
-        padding: 0px;
+        padding: 36px 0px 226px;
     }
     
     .container {
