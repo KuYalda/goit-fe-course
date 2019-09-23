@@ -64,6 +64,10 @@ ul {
     list-style: none;
 }
 
+.container-fluid {
+    max-width: 1440px;
+}
+
 /* HEADER */
 
 header {
