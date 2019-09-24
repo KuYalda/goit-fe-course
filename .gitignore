@@ -7,3 +7,4 @@ tsync
 *.txt
 /gulp
 /testgulp
+**/gulp-starter-kit
