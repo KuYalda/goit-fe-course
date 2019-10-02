@@ -144,10 +144,11 @@ body {
 }
 
 .site-title {
-  width: 840px;
+  width: 820px;
   font-family: 'Kaushan Script', cursive;
   font-size: 72px;
   line-height: 1.2;
+  letter-spacing: -3px;
   font-weight: 400;
   margin: 0px auto 100px;
   text-align: center;
@@ -171,12 +172,19 @@ body {
   width: 160px;
   height: 40px;
   background-color: rgba(0,0,0,0);
-  border: 3px solid red;
+  border: 3px solid #ffffff;
   font-size: 14px;
-  color: black;
+  color: #ffffff;
   font-family: "Montserrat";
   font-weight: 700;
   text-align: center;
+}
+
+.button__more:hover,
+.button__more:focus {
+  cursor: pointer;
+  color: #fce38a;
+  background-color: #ffffff;
 }
 
 /* MAIN CONTENT */
@@ -216,7 +224,7 @@ body {
 /* WE WORK SECTION */
 
 .we__work {
-  padding-bottom: 86px;
+  padding: 44px 0px 86px;
 }
 
 .we__work .section__header {
