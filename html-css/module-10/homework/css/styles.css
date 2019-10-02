@@ -65,7 +65,10 @@ body {
 
 .header {
   background-image: linear-gradient(0deg, rgba(251, 227, 137, 0.9) 0%, rgb(243, 138, 129, 0.9) 100%);
-  padding: 26px 0px 230px;
+}
+
+.header-container {
+  padding: 22px 0px 230px;
 }
 
 .main-navigation {
@@ -74,7 +77,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 151px;
+  margin-bottom: 162px;
 }
 
 .logo {
@@ -82,7 +85,7 @@ body {
   font-size: 30px;
   font-weight: 700;
   line-height: 1.2;
-  color: #95e1d3;
+  color: #ffffff;
 }
 
 .head-nav {
@@ -105,14 +108,14 @@ body {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 400;
-  color: #95e1d3;
+  color: #ffffff;
   padding: 12px 0px;
   border-bottom: 3px solid transparent;
 }
 
 .navigation__link:hover {
-  color: #f38181;
-  border-bottom: 3px solid #f38181;
+  color: #fce38a;
+  border-bottom: 3px solid #fce38a;
 }
 
 .actions {
@@ -121,6 +124,7 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px solid transparent;
+  list-style: none;
 }
 
 .action__cart {
@@ -136,26 +140,29 @@ body {
   height: 18px;
   background-color: red;
   border: none;
+  outline: none;
 }
 
 .site-title {
+  width: 840px;
   font-family: 'Kaushan Script', cursive;
   font-size: 72px;
   line-height: 1.2;
   font-weight: 400;
-  margin: 0px auto 110px;
+  margin: 0px auto 100px;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
 }
 
 .site-title--second {
   display: block;
   font-family: 'Montserrat', sans-serif;
   font-size: 150px;
+  line-height: 140px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 19px;
-  color: #000000;
+  color: #ffffff;
+  margin-top: 42px;
 }
 
 .button__more {
