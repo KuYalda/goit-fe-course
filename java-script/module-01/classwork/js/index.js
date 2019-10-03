@@ -395,3 +395,75 @@ console.log(total);
 // const number = Math.floor(2.6);
 // console.log(number);
 
+// let a = 5;
+
+// if (true) {
+//   let a = 10;
+//   a = 15;
+//   if (true) {
+//     let b = 20;
+//     console.log('b :', b);
+//   }
+//   console.log('a :', a);
+// }
+
+// console.log('a :', a);
+
+// for (let i = 0; i < 10; i += 1) {
+//   console.log('i :', i);
+// }
+
+// for (let i = 1; i <=10; i +=1) {
+//   if (i % 3 === 0) {
+//     console.log('hello');
+//   } else if (i % 5 ===0) {
+//     console.log('nice');
+//   }
+// }
+
+// let cash = 1000;
+// for (let i = 1; i <= 10; i += 1){
+//   cash = Math.round(cash / 10 * 1.8 + cash);
+//   console.log(`cash ${i} :`, cash);
+// }
+
+// let count = 0;
+
+// while (count < 10) {
+//   console.log('count :', count);
+//   count = count + 1;
+// }
+
+// let userInput;
+
+// do {
+//   userInput = prompt('What are you doing?');
+
+// } while (userInput === null)
+
+// // or while(!userInput) for data
+
+// console.log(userInput);
+
+// let whileCount = 0;
+// while(whileCount < 10) {
+//   if (whileCount % 2 === 0 && whileCount !== 0) {
+//     whileCount += 1;
+//     continue;
+//   }
+//   if (whileCount === 5) {
+//     alert('Wellcome');
+//     break;
+//   }
+//   console.log('whileCount :', whileCount);
+//   whileCount += 1;
+// }
+
+for(let i = 0; i < 10; i += 1) {
+  if(i % 2 === 0 && i !== 0) {
+    continue;
+  }
+  console.log('i :', i);
+}
+
+ret
