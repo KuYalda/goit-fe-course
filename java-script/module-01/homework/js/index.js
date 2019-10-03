@@ -89,7 +89,7 @@
 // const pricePerDroid = 3000;
 // const countDroid = Number(prompt('TASK#4. How much Droid do you need?'));
 // // console.log(typeof countDroid);
-// if (countDroid === null) {
+// if (countDroid === 0) {
 //   alert('Canceled by user!');
 // } else {
 //   const totalPrice = pricePerDroid * countDroid;
