@@ -128,22 +128,22 @@
 // // console.log(countryDelivery);
 // switch(countryDelivery) {
 //   case 'китай':
-//     alert(`Delivery to ${countryDelivery} will cost ${costDeliveryChina} credits`);
+//     alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryChina} credits`);
 //     break;
 //   case 'чили':
-//     alert(`Delivery to ${countryDelivery} will cost ${costDeliveryChile} credits`);
+//     alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryChile} credits`);
 //     break;
 //   case 'австралия':
-//     alert(`Delivery to ${countryDelivery} will cost ${costDeliveryAustralia} credits`);
+//     alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryAustralia} credits`);
 //     break;
 //   case 'индия':
-//     alert(`Delivery to ${countryDelivery} will cost ${costDeliveryIndia} credits`);
+//     alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryIndia} credits`);
 //     break;
 //   case 'ямайка':
-//     alert(`Delivery to ${countryDelivery} will cost ${costDeliveryJamaica} credits`);
+//     alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryJamaica} credits`);
 //     break;
 //   default:
-//     alert(`Delivery is not available in ${countryDelivery}`);
+//     alert(`Delivery is not available in ${countryDelivery.toUpperCase()}`);
 //     break;
 // }
 
