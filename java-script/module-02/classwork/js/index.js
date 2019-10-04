@@ -289,16 +289,139 @@
 // console.log(languages);
 // // ["C", "Python", "C#", "Swift", "Go", "JavaScript"]
 
-// const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
-// const newClients = ['Monkong', 'Singu'];
+// 
 
-// const allClients = oldClients.concat(newClients);
+// const arr = ['Luck', 'Rob', 'Sansa'];
 
-// console.log(allClients);
-// // ["Mango", "Ajax", "Poly", "Kiwi", "Monkong", "Singu"]
+// arr.splice(0, 2, 'Chaky', 'Romeo', 'Frank');
 
-// console.log(oldClients);
-// // ["Mango", "Ajax", "Poly", "Kiwi"]
+// console.log('arr :', arr);
+// console.log(
+//     arr.splice(arr.length - 1,
+//         0,
+//         'Jessika')
+// );
+// console.log('arr :', arr);
 
-// console.log(newClients);
-// // ["Monkong", "Singu"]
+// const newUsers = ['Unknown'];
+// const users = newUsers.concat(arr);
+// newUsers.push('Some');
+// console.log('users :', users);
+// console.log('newUsers :', newUsers);
+// console.log('arr :', arr);
+
+// users.push('Bart');
+// console.log('users :', users);
+
+// const players = ['Bob', 'Pinky', 'Jack', 'Alan'];
+// const winner = 'Jack';
+// let winnerIndex;
+// for(let i = 0; i < players.length; i += 1) {
+//     if(players[i] === winner) {
+//         winnerIndex = i;
+//         break;
+//     }
+// }
+// alert(`Winner is ${players[winnerIndex]}`);
+
+// const userName = 'Alex';
+// const userSurname = 'Duglas';
+// // `Hello ${userName} ${userSurname}`;
+
+// function getUserInfo(name, surname) {
+//     return `Hello ${name} ${surname}`;
+// }
+
+// console.log(
+//     getUserInfo(userName, userSurname)
+// );
+
+// const salary = [1000, 1200, 1200, 1500];
+// const currency = 25;
+
+// function getSalarySum(salaryArr, currencyValue, ...args) {
+//     // console.log(arguments);
+//     console.log('args :', args);
+//     let summ = 0;
+//     for(const el of salaryArr) {
+//         summ += el * currencyValue;
+//     }
+//     return summ;
+// }
+
+// console.log(getSalarySum(salary, currency));
+
+// // const getSalarySum = function(params) {
+    
+// // }
+
+// function fnB() {
+//     console.log('Выполняется [fnB]');
+//   }
+  
+//   function fnA() {
+//     console.log('Начала выполняться [fnA]');
+//     fnB();
+//     console.log('Продолжила выполняться [fnA] после выхода из [fnB]');
+//     // return '5';
+//   }
+  
+//   console.log('Начал выполнение [global]');
+//   fnA();
+//   console.log('Продолжил выполняться [global] после выхода из [fnA]');
+  
+//   /*
+//    * Начал выполнение [global]
+//    * Начала выполняться [fnA]
+//    * Выполняется [fnB]
+//    * Продолжила выполняться [fnA] после выхода из [fnB]
+//    * Продолжил выполняться [global] после выхода из [fnA]
+//    */
+
+// console.log(fnA());
+
+// const counter = function(initialValue = 0, step = 1) {
+//     console.log(`initialValue = ${initialValue}, step = ${step}`);
+//   };
+  
+//   counter(10, 5); // initialValue = 10, step = 5
+//   counter(10); // initialValue = 10, step = 1
+//   counter(undefined, 10); // initialValue = 0, step = 10
+//   counter(); // initialValue = 0, step = 1
+//   counter(15, undefined);
+  
+// const sum = function() {
+//     let total = 0;
+  
+//     for (const argument of arguments) {
+//       total += argument;
+//     }
+//     return total;
+//   };
+
+  
+//   console.log(sum(1, 2, 3)); //  6
+//   console.log(sum(1, 2, 3, 4)); //  10
+//   console.log(sum(1, 2, 3, 4, 5)); //  15
+//   console.log(sum(1, 2, 5, 9, 1));
+
+// const fn = function() {
+//   const args = Array.from(arguments); // args это полноценный массив
+//   // return args;
+//   return arguments;
+// };
+
+// console.log(fn(1, 2, 3,));
+
+// const fn = function(...args) {
+//   // args это полноценный массив
+//   return args;
+// };
+
+// let newArr = fn(5, 10, 15, 20, 25);
+
+// console.log(newArr);
+
+// console.log('Этого сообщения не будет в консоли');
+
+// const value = 5;
