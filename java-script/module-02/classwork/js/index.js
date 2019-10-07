@@ -425,3 +425,99 @@
 // console.log('Этого сообщения не будет в консоли');
 
 // const value = 5;
+
+// const product = 'apples';
+// const products = ['apples', 'grapes', 'bananas'];
+// products[0] = 'chicken'; // change element arr products
+// console.log(products[0]);
+// // products[0] = 5;
+// // products[1] = 15;
+// // products[2] = 50;
+// // console.log(products[0]);
+
+// console.log(products.length);
+// console.log(products);
+// products[3] = 'hare';
+
+// console.log(products);
+
+// const board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]; // многомерный массив
+
+// console.log(board[0][2]); // доступ к его элементу
+
+// const a = [1, 2, 3];
+// const b = [1, 2, 3];
+
+// console.log(a === b); //не равны
+
+// const a = [1, 2, 3];
+// let b = a;
+// console.log(a === b); //ссылка на массив идентична
+
+// a[3] = 4;
+// console.log('a:', a);
+// console.log('b:', b);
+// b[4] = 5;
+// console.log('a:', a);
+// console.log('b:', b);
+
+// const products = ['apples', 'grapes', 'bananas'];
+// const message = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, odit!';
+// console.log(message);
+
+// const words = message.split(' ');
+// console.log(words);
+
+// const snakeCaseMessage = words.join('_');
+// console.log(snakeCaseMessage);
+
+// const indexOfApples = products.indexOf('apples');
+
+// console.log(indexOfApples);
+
+// const isInProducts = products.includes('apples');
+
+// console.log(isInProducts);
+
+// const add = function(x, y) {
+//   console.log('x :', x);
+//   console.log('y :', y);
+//   return x + y;
+// }
+// add(2, 3);
+// console.log(add(22, 5));
+
+// function add1(x, y) {
+//   console.log('x :', x);
+//   console.log('y :', y);
+//   return x + y;  
+// }
+
+// console.log('add1 :', add1(10, 5));
+
+// const string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure autem nesciunt, ut nisi maiores possimus?';
+
+// const words = string.split(' ');
+// console.log('words :', words);
+// let longestWord = words[0];
+// for (const word of words) {
+//   if(word.length > longestWord.length) {
+//     longestWord = word;
+//   }
+// }
+
+// console.log('longestWord :', longestWord);
+
+// const findLongestWord = function(string) {
+//   const words = string.split(' ');
+//   let longestWord = words[0];
+//   for (const word of words) {
+//   if(word.length >= longestWord.length) {
+//     longestWord = word;
+//     // continue;
+//     }
+//   }
+//   return longestWord;
+// }
+
+// console.log(findLongestWord('Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure autem nesciunt, ut nisi maiores possimus?'));
