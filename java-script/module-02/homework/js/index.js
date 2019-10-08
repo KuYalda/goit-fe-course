@@ -312,3 +312,29 @@
 
 // addLogin(logins, userName);
 // console.log('logins :', logins);
+
+// The best decision!!!
+
+// const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
+
+// function isLoginValid(login){
+//   return login.length >= 4 && login.length <= 16;
+// };
+
+// function isLoginUnique(allLogins, login) {
+//   return !allLogins.includes(login);
+// };
+
+// function addLogin(allLogins, login) {
+//   if(!isLoginValid(login)) {
+//     return alert('Login must be from 4 to 16 characters');
+//   } else if(!isLoginUnique) {
+//     return('Such login already exists');
+//   } else {
+//     allLogins.push(login);
+//   }
+//   console.log(allLogins);
+//   return 'Login successfully added!';
+// }
+
+// console.log(addLogin(logins, prompt('Enter login!') ));

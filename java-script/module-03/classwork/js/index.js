@@ -350,3 +350,19 @@
 // const i = Object.assign(target, ...sources);
 
 // console.log('sources :', sources);
+
+const user = {
+  name: 'Bart',
+  surname: 'Simpson',
+  age: 21,
+    getInfo() {
+      console.log(`Hello! I'm ${this.name} ${this.surname}. I'm ${this.age} age`);
+    },
+    changeAge(age) {
+      this.age = age;
+      console.log(`Hello! I'm ${this.name} ${this.surname}. I'm ${this.age} age`);
+    }
+}
+user.getInfo();
+user.changeAge(24);
+console.log('user.age :', user.age);
