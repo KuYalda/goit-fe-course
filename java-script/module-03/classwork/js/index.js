@@ -351,18 +351,176 @@
 
 // console.log('sources :', sources);
 
-const user = {
-  name: 'Bart',
-  surname: 'Simpson',
-  age: 21,
-    getInfo() {
-      console.log(`Hello! I'm ${this.name} ${this.surname}. I'm ${this.age} age`);
-    },
-    changeAge(age) {
-      this.age = age;
-      console.log(`Hello! I'm ${this.name} ${this.surname}. I'm ${this.age} age`);
-    }
-}
-user.getInfo();
-user.changeAge(24);
-console.log('user.age :', user.age);
+// const user = {
+//   name: 'Bart',
+//   surname: 'Simpson',
+//   age: 21,
+//     getInfo() {
+//       console.log(`Hello! I'm ${this.name} ${this.surname}. I'm ${this.age} age`);
+//     },
+//     changeAge(age) {
+//       this.age = age;
+//       console.log(`Hello! I'm ${this.name} ${this.surname}. I'm ${this.age} age`);
+//     }
+// }
+// user.getInfo();
+// user.changeAge(24);
+// console.log('user.age :', user.age);
+
+// function marry(man, woman) {
+//   woman.husband = man;
+//   man.wife = woman;
+  
+//   return {
+//     father: man,
+//     mother: woman
+//   }
+// }
+
+// let family = marry({
+//   name: "John"
+// }, {
+//   name: "Ann"
+// });
+
+// console.log('family :', family);
+
+// // delete family.father;
+// // delete family.mother.husband;
+
+// // console.log('family :', family);
+
+// family = null;
+// console.log('family :', family);
+
+// const a = {value: 'asdsad', surname: 'Simpson'};
+// const b =Object.assign({}, a,{value:100});
+
+// b.name = 'Bart';
+// console.log('b :', b);
+
+// function fun(...object) {
+//   return object;
+// }
+
+// console.log('fun(1, 2, [], Hello) :', fun(1, 2, [], 'Hello'));
+
+// const c = {...a, ...{value:200}};
+
+// console.log('c :', c);
+
+// const arr1 = [1, 2, 3];
+// const arr2 = [...arr1,...[4, 5]];
+
+// console.log('arr2 :', arr2);
+
+// console.log('fun(...arr2) :', fun(...arr2, ...arr1));
+// console.log('fun(...arr2) :', fun(a, c));
+
+// const user ={
+//   name: 'Bart',
+//   surname: 'Simpson',
+//   sex: 'male',
+//   age:20,
+//   free: true,
+//   color: ['black', 'white'],
+//   hobbies: ['jackes', 'tennis']
+// }
+
+// // user.name
+// // user.surname
+// // user.sex
+// // ...
+
+// // console.log(const { name, surname } = user;);
+// const { name, surname: sname } = user;
+// console.log(name);
+// console.log(sname);
+
+// let id1 = Symbol("id");
+// let id2 = Symbol("id");
+
+// console.log((id1 == id2)); // false
+// // alert(id1); // TypeError: Cannot convert a Symbol value to a string
+
+// console.log(id1.description);
+
+// let user = {
+//   name: "Вася"
+// };
+
+// let id = Symbol("ID");
+
+// user[id] = 1;
+
+// alert( user[id] ); // мы можем получить доступ к данным по ключу-символу
+// alert( id.toString() ); // мы можем получить доступ к данным по ключу-символу
+
+// console.log('user :', user);
+
+// const arr = [255, 255, 255];
+// const [r, g, b, a] = arr;
+
+// console.log(a);
+
+// let id1 = Symbol("id");
+// let id2 = Symbol("id");
+
+// let id = Symbol.for("id");
+
+// let user = {
+//   name: "Вася",
+//   id: 123,
+//   [id]: 458962 // просто "id: 123" не сработает
+// };
+
+// console.log('user :', user);
+
+// let rez = Object.values(user);
+// console.log('rez :', rez);
+// rez = Object.entries(user);
+// console.log('rez :', rez);
+
+// rez = Object.assign({}, user, {surname: 'Popovichs'})
+// console.log('rez :', rez);
+
+// let idAgain = Symbol.for("id");
+// // console.log('id2 === idAgain :', id2 === idAgain);
+// console.log('id === idAgain :', id === idAgain);
+// // console.log('id1 === idAgain :', id1 === idAgain);
+// console.log('idAgain :', idAgain);
+
+// console.log('Symbol.keyFor(idAgain) :', Symbol.keyFor(idAgain));
+
+// console.log(Reflect.ownKeys(user));
+
+// console.log(Object.getOwnPropertySymbols(user));
+
+// Объект пользователя
+
+// let user = {
+//   name: "Джон",
+//   age: 30
+// };
+
+// user.sayHi = function() {
+//   return "Привет!";
+// };
+
+// let user = {
+//   // ...
+// };
+
+// // сначала объявляем
+// function sayHi() {
+//   return "Привет!";
+// };
+
+// // затем добавляем в качестве метода
+// // user.sayHi = sayHi;
+
+// // console.log('user.sayHi() :', user.sayHi()); // Привет!
+
+// console.log('user :', user);
+
+// console.log(Number('') >= 0);
