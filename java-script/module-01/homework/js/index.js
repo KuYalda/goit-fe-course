@@ -124,27 +124,33 @@
 // const costDeliveryIndia = 80;
 // const costDeliveryJamaica = 120;
 
-// const countryDelivery = prompt('TASK#5. What country do you need delivery to?').toLowerCase();
+// const countryDelivery = prompt('TASK#5. What country do you need delivery to?');
+// // const Delivery = countryDelivery.toLowerCase();
 // // console.log(countryDelivery);
-// switch(countryDelivery) {
-//   case 'китай':
-//     alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryChina} credits`);
-//     break;
-//   case 'чили':
-//     alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryChile} credits`);
-//     break;
-//   case 'австралия':
-//     alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryAustralia} credits`);
-//     break;
-//   case 'индия':
-//     alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryIndia} credits`);
-//     break;
-//   case 'ямайка':
-//     alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryJamaica} credits`);
-//     break;
-//   default:
-//     alert(`Delivery is not available in ${countryDelivery.toUpperCase()}`);
-//     break;
+// if(countryDelivery === null) {
+//   alert(`Delivery is not available`);
+// } else {
+//   const Delivery = countryDelivery.toLowerCase();
+//   switch(Delivery) {
+//     case 'китай':
+//       alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryChina} credits`);
+//       break;
+//     case 'чили':
+//       alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryChile} credits`);
+//       break;
+//     case 'австралия':
+//       alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryAustralia} credits`);
+//       break;
+//     case 'индия':
+//       alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryIndia} credits`);
+//       break;
+//     case 'ямайка':
+//       alert(`Delivery to ${countryDelivery.toUpperCase()} will cost ${costDeliveryJamaica} credits`);
+//       break;
+//     default:
+//       alert(`Delivery is not available in ${countryDelivery}`);
+//       break;
+//   }
 // }
 
 // TASK#6
