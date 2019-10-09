@@ -70,11 +70,11 @@
 // ];
 
 // const getSalaryBy = function(arrUsers, currency, tax, action) {
-//   const usersSalary = [];
+//   let usersSalary = [];
 //   for(const user of arrUsers) {
 //     const { salary } = user;
-//     usersSalary.push(action(salary, currency, tax));
-//     // usersSalary = [...usersSalary, currency]
+//     // usersSalary.push(action(salary, currency, tax));
+//     usersSalary = [...usersSalary, action(salary, currency, tax)];
 //   }
 //   return usersSalary;
 // }
@@ -110,3 +110,88 @@
 // };
 
 // c();
+
+// const counter = function() {
+//   let increment = 0;
+//   const onIncrement = function() {
+//     return increment += 1;
+//   }
+//   return onIncrement;
+// }
+
+// const counter1 = counter();
+// const counter2 = counter();
+
+// console.log('counter1() :', counter1());
+// console.log('counter1() :', counter1());
+// console.log('counter1() :', counter1());
+// console.log('counter2() :', counter2());
+// console.log('counter1() :', counter1());
+// console.log('counter1() :', counter1());
+// console.log('counter1() :', counter1());
+// console.log('counter1() :', counter1());
+// console.log('counter2() :', counter2());
+// console.log('counter1 :', counter1);
+
+// эти объекты делают одно и то же (одинаковые методы)
+
+// let user = {
+//   sayHi: function() {
+//     alert("Привет");
+//   }
+// };
+
+// // сокращённая запись выглядит лучше, не так ли?
+// user = {
+//   sayHi() { // то же самое, что и "sayHi: function()"
+//     alert("Привет");
+//   }
+// };
+
+// console.log('user :', user);
+// user.sayHi()
+
+// let user = {
+//   name: "Джон",
+//   age: 30,
+
+//   sayHi() {
+//     // this - это "текущий объект"
+//     alert(this.name);
+//   }
+
+// };
+
+// user.sayHi(); // Джон
+
+// let user = {
+//   name: "Джон",
+//   age: 30,
+
+//   sayHi() {
+//     alert(this.name); // используем переменную "user" вместо ключевого слова "this"
+//   }
+
+// };
+
+// console.log('eser.sayHi() :', user.sayHi());
+
+// let user = { name: "Джон" };
+// let admin = { name: "Админ" };
+
+// function sayHi() {
+//   alert( this.name );
+// }
+
+// // используем одну и ту же функцию в двух объектах
+// user.f = sayHi;
+// admin.f = sayHi;
+
+// // console.log('admin :', admin);
+
+// // вызовы функции, приведённые ниже, имеют разное значение this
+// // "this" внутри функции является ссылкой на объект, который указан "перед точкой"
+// user.f(); // Джон  (this == user)
+// admin.f(); // Админ  (this == admin)
+
+// admin['f'](); // Админ (неважен способ доступа к методу - через точку или квадратные скобки)
