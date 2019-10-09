@@ -195,3 +195,44 @@
 // admin.f(); // Админ  (this == admin)
 
 // admin['f'](); // Админ (неважен способ доступа к методу - через точку или квадратные скобки)
+
+// console.log('this :', this);
+
+// const user = {
+//   name: 'Boris',
+//   age: 20,
+// }
+
+// const getInfo = () => `${this.name}, age: ${this.age}`; not in object only in function
+
+// const getInfo = function() {
+//   const getAge = () => this.age;
+//   return `${this.name}, age: ${getAge()}`;
+// }
+
+// user.getInfo = getInfo;
+// console.log('user :', user);
+// console.log('user.getInfo :', user.getInfo());
+
+// console.log('getInfo :', getInfo()); // err not this
+
+// let user = {
+//   name: "Джон",
+//   hi() { alert(this.name); },
+//   bye() { alert("Пока"); }
+// };
+
+// user.hi(); // Джон (простой вызов метода работает хорошо)
+
+// // теперь давайте попробуем вызывать user.hi или user.bye
+// // в зависимости от имени пользователя user.name
+// (user.name == "Джон" ? user.hi : user.bye)(); // Ошибка!
+
+// const someFunc = function(action) {
+//   console.log('this :', this);
+//   return action();
+// }
+
+// console.log(someFunc(user.getInfo.bind(user)));
+
+// console.log('getInfo.call(user) :', getInfo.call(user));
