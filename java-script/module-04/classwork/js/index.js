@@ -236,3 +236,160 @@
 // console.log(someFunc(user.getInfo.bind(user)));
 
 // console.log('getInfo.call(user) :', getInfo.call(user));
+
+// const arr = [1, 2, 3, 4, 5];
+// const users = [{id: 12313},{id: 'asdasdasd'}];
+// const index = 3;
+
+// const squareOfArr = [];
+
+// for(const el of arr) {
+//   console.log(`el ${arr.indexOf(el)}:`, el);
+//   squareOfArr.push(el*el);
+// }
+
+// console.log('squareOfArr :', squareOfArr);
+
+// const squareOfArr1 = [];
+
+// for(const el of arr) {
+//   console.log(`el ${arr.indexOf(el)}:`, el);
+//   squareOfArr1.push(el*el*el);
+// }
+
+// console.log('squareOfArr1 :', squareOfArr1);
+
+// const arrToSquare = function() {
+//   const newArr = [];
+//   for(const el of arr) {
+//     newArr.push(el*el);
+//   }
+//   return newArr;
+// }
+
+// console.log('arrToSquare() :', arrToSquare());
+
+// // const higherOrderFunction = function(callback) {
+// //   const string = 'HOCs are awesome';
+// //   callback(string);
+// // };
+
+// // const printMessage = function(message) {
+// //   console.log(message);
+// // };
+
+// // console.log('higherOrderFunction(printMessage) :', higherOrderFunction(printMessage));
+
+// for (let i = 0; i < 10; i += 1) {
+//   console.log(i);
+// }
+
+// function repeatLog(n) {
+//   for (let i = 0; i < n; i += 1) {
+//     console.log(`${i+1} :`, i);
+//   }
+// }
+
+// repeatLog(5);
+
+// function repeat(n, action) {
+//   for (let i = 0; i < n; i += 1) {
+//     action(`${i} :`, i);
+//   }
+// }
+
+// // Передаем console.log как callback-функцию
+// repeat(3, console.log);
+// // 0
+// // 1
+// // 2
+
+
+// const labels = [];
+
+// repeat(5, function(i) {
+//   labels.push(`Label ${i + 1}`);
+// });
+
+// console.log(labels); // ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5"]
+
+// const filter = function(array, test) {
+//   const filtered = [];
+
+//   for (const element of array) {
+//     const passed = test(element);
+
+//     if (passed) {
+//       filtered.push(element);
+//     }
+//   }
+
+//   return filtered;
+// };
+
+// const filter = function(array, test) {
+//   const filtered = [];
+
+//   for (const element of array) {
+//     const passed = test(element);
+
+//     if (passed) {
+//       filtered.push(element);
+//     }
+//   }
+
+//   return filtered;
+// };
+
+// const fruits = [
+//   { name: 'apples', quantity: 200, isFresh: true },
+//   { name: 'grapes', quantity: 150, isFresh: false },
+//   { name: 'bananas', quantity: 100, isFresh: true },
+// ];
+
+// const freshFruits = filter(fruits, fruit => fruit.isFresh);
+// console.log(freshFruits); // массив с объектами apples и bananas
+
+// const fruitsWithQuantity = filter(fruits, fruit => fruit.quantity >= 120);
+// console.log(fruitsWithQuantity); // массив с объектами apples и grapes
+
+const hero = {
+  name:'Lancelot',
+  defence: 10,
+  health: 200,
+  attack: 20,
+}
+
+const dragon = {
+  name:'Drakaries',
+  defence: 40,
+  health: 500,
+  attack: 100,
+}
+
+const attackTarget = function(agressor) {
+  let hit;
+  if(agressor.name === 'Lancelot'){
+    const chance = Math.round((Math.random() * 100));
+    hit = chance <= 40 ? 300 : Math.round((1 - this.defence *0.01) * agressor.attack);
+  } else {
+    hit = Math.round((1 - this.defence *0.01) * agressor.attack);
+  }
+
+  this.health -= hit;
+  console.log(`${agressor.name} hit : ${hit}`);
+  console.log(`${this.name} : ${this.health}`);
+}
+
+while(hero.health > 0 && dragon.health > 0) {
+  attackTarget.call(dragon, hero);
+  if(dragon.health > 0) {
+  attackTarget.call(hero, dragon)
+  };
+}
+
+if(hero.health > 0) {
+  alert(`${hero.name} winner!`)
+} else {
+  alert(`${dragon.name} winner!`)
+}
