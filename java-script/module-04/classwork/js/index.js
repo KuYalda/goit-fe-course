@@ -269,6 +269,48 @@
 
 // console.log('arrToSquare() :', arrToSquare());
 
+
+// const hero = {
+//   name:'Lancelot',
+//   defence: 10,
+//   health: 200,
+//   attack: 20,
+// }
+
+// const dragon = {
+//   name:'Drakaries',
+//   defence: 40,
+//   health: 500,
+//   attack: 100,
+// }
+
+// const attackTarget = function(agressor) {
+//   let hit;
+//   if(agressor.name === 'Lancelot'){
+//     const chance = Math.round((Math.random() * 100));
+//     hit = chance <= 40 ? 300 : Math.round((1 - this.defence *0.01) * agressor.attack);
+//   } else {
+//     hit = Math.round((1 - this.defence *0.01) * agressor.attack);
+//   }
+
+//   this.health -= hit;
+//   console.log(`${agressor.name} hit : ${hit}`);
+//   console.log(`${this.name} : ${this.health}`);
+// }
+
+// while(hero.health > 0 && dragon.health > 0) {
+//   attackTarget.call(dragon, hero);
+//   if(dragon.health > 0) {
+//   attackTarget.call(hero, dragon)
+//   };
+// }
+
+// if(hero.health > 0) {
+//   alert(`${hero.name} winner!`)
+// } else {
+//   alert(`${dragon.name} winner!`)
+// }
+
 // // const higherOrderFunction = function(callback) {
 // //   const string = 'HOCs are awesome';
 // //   callback(string);
@@ -347,49 +389,134 @@
 //   { name: 'bananas', quantity: 100, isFresh: true },
 // ];
 
+// const action = fruit => fruit.isFresh
+
 // const freshFruits = filter(fruits, fruit => fruit.isFresh);
 // console.log(freshFruits); // массив с объектами apples и bananas
 
 // const fruitsWithQuantity = filter(fruits, fruit => fruit.quantity >= 120);
 // console.log(fruitsWithQuantity); // массив с объектами apples и grapes
 
-const hero = {
-  name:'Lancelot',
-  defence: 10,
-  health: 200,
-  attack: 20,
-}
+// const bar = function() {
+//   console.log('bar');
+// };
 
-const dragon = {
-  name:'Drakaries',
-  defence: 40,
-  health: 500,
-  attack: 100,
-}
+// const baz = function() {
+//   console.log('baz');
+// };
 
-const attackTarget = function(agressor) {
-  let hit;
-  if(agressor.name === 'Lancelot'){
-    const chance = Math.round((Math.random() * 100));
-    hit = chance <= 40 ? 300 : Math.round((1 - this.defence *0.01) * agressor.attack);
-  } else {
-    hit = Math.round((1 - this.defence *0.01) * agressor.attack);
-  }
+// const foo = function() {
+//   console.log('foo');
+//   bar();
+//   baz();
+//   console.log('exit foo');
+// };
 
-  this.health -= hit;
-  console.log(`${agressor.name} hit : ${hit}`);
-  console.log(`${this.name} : ${this.health}`);
-}
+// foo();
 
-while(hero.health > 0 && dragon.health > 0) {
-  attackTarget.call(dragon, hero);
-  if(dragon.health > 0) {
-  attackTarget.call(hero, dragon)
-  };
-}
+// /*
+//   Global env - создается при исполнении файла скрипта
+//     Record: {}
+//     Parent: null
+// */
 
-if(hero.health > 0) {
-  alert(`${hero.name} winner!`)
-} else {
-  alert(`${dragon.name} winner!`)
-}
+// const x = 10;
+// /*
+//   Global env
+//     Record: {x: 10}
+//     Parent: null
+// */
+
+// const y = 20;
+// /*
+//   Global env
+//     Record: {x: 10, y: 20}
+//     Parent: null
+// */
+
+// /*
+//   Записывается в момент объявления функции
+//   [[Environment]] = Global env
+// */
+// const foo = function(z) {
+//   /*
+//     Foo env - создается в момент вызова функции
+//       Record: {z: 30}
+//       Parent: Global env
+//   */
+
+//   const x = 100;
+//   /*
+//     Foo env - создается в момент вызова функции
+//       Record: {z: 30, x: 100}
+//       Parent: Global env
+//   */
+
+//   return x + y + z;
+// };
+
+// /*
+//   Global env
+//     Record: {x: 10, y: 20, foo: <function>}
+//     Parent: null
+// */
+
+// foo(30); // 150
+
+// const createCounter = function() {
+//   // Локальная переменная privateCounter, доступна только в замыкании
+//   let privateCounter = 0;
+
+//   const increment = function() {
+//     privateCounter += 1;
+//     console.log(``, privateCounter);
+//   };
+
+//   return increment;
+// };
+
+// const counterA = createCounter();
+
+// const counterB = createCounter();
+
+// counterA(); //1
+// counterA(); //2
+// counterB(); //1
+// counterA(); //3
+// counterB(); //2
+// counterA(); //4
+// counterB(); //3
+// counterB(); //4
+// counterA(); //5
+// counterB(); //5
+// counterB(); //6
+
+// function numberGenerator() {
+//   // Local “free” variable that ends up within the closure
+//   let num = 1;
+//   function checkNumber() { 
+//     console.log(num);
+//     // num ++; Number Generator
+//     // return num;
+//   }
+//   // console.log('num :', num);
+//   num++; //Not number Generator
+//   // console.table('num :', num);
+//   return checkNumber;
+// }
+
+// let number = numberGenerator();
+// number(); // 2
+// number(); // 2
+// number(); // 2
+
+
+// function sayHello() {
+//   var say = function() { console.log(hello); }
+//   // Local variable that ends up within the closure 
+//   var hello = 'Hello, world!';
+//   return say;
+// }
+// var sayHelloClosure = sayHello(); 
+// sayHelloClosure(); // ‘Hello, world!’
+
