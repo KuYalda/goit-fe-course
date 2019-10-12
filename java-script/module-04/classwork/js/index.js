@@ -520,3 +520,92 @@
 // var sayHelloClosure = sayHello(); 
 // sayHelloClosure(); // ‘Hello, world!’
 
+// let x = 10;
+// function foo(a) {
+//   let b = 20;
+
+//   function bar(c) {
+//     console.log('bar');
+//     let d = 30;
+//     return boop(x + a + b + c + d);
+//   }
+
+//   function boop(e) {
+//     console.log('boop');
+//     return e * -1;
+//   }
+// console.log('foo');
+//   return bar;
+// }
+
+// let moar = foo(5); // Closure  
+// /* 
+//   The function below executes the function bar which was returned 
+//   when we executed the function foo in the line above. The function bar 
+//   invokes boop, at which point bar gets suspended and boop gets push 
+//   onto the top of the call stack (see the screenshot below)
+// */
+// console.log('moar(15) :', moar(15));
+
+// let x = 10;
+
+// function foo() {
+//   let y = 20; // free variable
+//   function bar() {
+//     let z = 15; // free variable
+//     return x + y + z;
+//   }
+//   return bar;
+// }
+
+
+// var x = 10;
+
+// function bar() {
+//   var x = 2;
+//   // function foo() { Dynamic scope
+//   //   var y = x + 5;
+//   //   return y;
+//   // }
+//   return foo();
+// }
+
+// function foo() {
+//   var y = x + 5;
+//   return y;
+// }
+
+// function main() {
+//   console.log('bar() :', bar()); // Static scope: 15; Dynamic scope: 7
+//   console.log('foo() :', foo()); // Static scope: 15; Dynamic scope: 15
+//   return 0;
+// }
+
+// main();
+
+
+// var myVar = 100;
+
+// function foo() {
+//   console.log(myVar);
+// }
+
+// foo(); // Static scope: 100; Dynamic scope: 100
+
+// (function () {
+//   var myVar = 50;
+//   foo(); // Static scope: 100; Dynamic scope: 50
+// })();
+
+// // Higher-order function
+// (function (arg) {
+//   var myVar = 1500;
+//   arg();  // Static scope: 100; Dynamic scope: 1500
+// })(foo);
+
+// class Student {
+//   constructor (){}
+// }
+
+// console.log(	
+//   typeof Student === 'object');
