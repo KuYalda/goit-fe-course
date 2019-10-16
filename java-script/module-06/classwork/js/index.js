@@ -1,5 +1,8 @@
 'use strict'
 
+import users from './users.js';
+console.log(users);
+
 // Императивный подход
 
 // const filter = array => {
@@ -186,7 +189,7 @@
 // // Функциональный forEach
 // numbers.forEach(num => console.log(num));
 
-// // Указываем параметр idx если нужен доступ к счетчику
+// // Указываем пobjectараметр idx если нужен доступ к счетчику
 // numbers.forEach((num, idx) => console.log(`index ${idx}, value ${num}`));
 
 // var arr = ["Яблоко", "Апельсин", "Груша"];
@@ -299,7 +302,7 @@
 
 // const summ = numbers.reduce((acc, value) => acc + value, 0);
 
-// console.log(summ); // 15
+// console.log(sumobjectm); // 15
 
 // const tweets = [
 //   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
@@ -433,4 +436,80 @@
 //   .map(y => y * 2)
 //   .reverse();
 
-// console.log(result);
+// console.log(result);object
+
+// function x() {
+//   function y() {
+//     console.log(this);
+//   }
+//   return y;
+// }
+
+// x();
+
+// function x() {
+//   function y() {
+//     console.log(this);
+//   }
+//   return y
+// }
+
+// x();
+
+// [1, 2, 3].forEach(function(el, idx, arr) {
+//   console.log(`el - ${idx}`, el , arr);
+// });
+
+// const newArr = users.map((el) => el.name);
+// console.log('newArr :', newArr);
+
+// const newArr = users.map((el) => {
+//   const {name, age, balance} = el;
+//   return {name, age, balance : Math.round(balance * 25)};
+// });
+
+// const newArr = users.map(({ name, age, balance }) => 
+//   ({name, age, balance : Math.round(balance * 25)}));
+
+// const newArr = users.map((el) => {
+//   const {name, age, balance} = el;
+//   if(age > 23) //return undefined
+//   return {name, age, balance : Math.round(balance * 25)};
+// });
+
+
+// console.log('newArr :', newArr);
+
+// const filterArr = users.filter((el => el.age > 23));
+
+// console.log('filterArr :', filterArr);
+
+// const filterArr = users.filter((el => el.age > 23 && el.isActive));
+
+// const filterArr = users.filter((el => !el.isActive));
+
+// const filterArr = users
+//   .filter(el => !el.isActive)
+//   .map(el => el.name);
+
+const id = '5da6ca6a1ec99d9f45cb1c29';
+
+// const filterArr = users.filter((el) => el.id !== id);
+
+// const filterArr = users.filter((el) => el.id === id);
+
+// console.log('filterArr :', filterArr);
+
+// const findOne = users.find((el) => el.id === id);
+
+// console.log('findOne :', findOne);
+
+const newArr = users.map((el) => {
+  if(el.id === id) {
+    return {...el, isActive: !el.isActive, name: 'Bart Simpson'}
+  }
+  return el;
+})
+
+console.log('newArr :', newArr);
+
