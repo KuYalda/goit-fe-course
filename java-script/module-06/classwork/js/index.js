@@ -1,7 +1,7 @@
 'use strict'
 
 import users from './users.js';
-console.log(users);
+// console.log(users);
 
 // Императивный подход
 
@@ -492,7 +492,7 @@ console.log(users);
 //   .filter(el => !el.isActive)
 //   .map(el => el.name);
 
-const id = '5da6ca6a1ec99d9f45cb1c29';
+// const id = '5da6ca6a1ec99d9f45cb1c29';
 
 // const filterArr = users.filter((el) => el.id !== id);
 
@@ -504,12 +504,14 @@ const id = '5da6ca6a1ec99d9f45cb1c29';
 
 // console.log('findOne :', findOne);
 
-const newArr = users.map((el) => {
-  if(el.id === id) {
-    return {...el, isActive: !el.isActive, name: 'Bart Simpson'}
-  }
-  return el;
-})
+// const newArr = users.map((el) => {
+//   if(el.id === id) {
+//     return {...el, isActive: !el.isActive, name: 'Bart Simpson'}
+//   }
+//   return el;
+// })
 
-console.log('newArr :', newArr);
+// const newArr = users.map((el) => el.name);
+
+// console.log('newArr :', newArr);
 

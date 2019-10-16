@@ -26,13 +26,14 @@ console.log(users);
 
 // console.log(getUsersWithEyeColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
-// TASK#3???????
+// TASK#3
 // Получить массив имен пользователей по полу (поле gender).
 
-// const getUsersWithGender = (users, gender) => {
-//   users.reduce(userGender, { name, gender = value }) => {
-//     value === gender ? userGender.push(name);
-//   };
+// const getUsersWithGender = (users, _gender) => {
+//   const userGender = users.reduce((ourUsers, { name, gender })  => {
+//     gender === _gender ? ourUsers.push(name) : ourUsers;
+//     return ourUsers;
+//   }, []);
 //   return userGender;
 // }
 
@@ -87,39 +88,52 @@ console.log(users);
 
 // console.log(calculateTotalBalance(users)); // 20916
 
-// TASK#8?????????????????????????????????????
+// TASK#8
 
 // Массив имен всех пользователей у которых есть друг с указанным именем.
 
 // const getUsersWithFriend = (users, friendName) => {
-//   const friendlyUser = users.reduce((friendly, { name, friends }) => {
-//     if(friends === friendName) {
-//       friendly.push(name);
-
-//     }
-//   }, []);
+//   const friendlyUser = users.reduce((nameArr, { name, friends }) => {
+//     friends.includes(friendName) ? nameArr.push(name) : nameArr;
+//     return nameArr;
+//   }, [])
 //   return friendlyUser;
 // };
 
 // console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 // console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 
-// // TASK#9 ??????????
+// // TASK#9
 
 // // Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
 
 // const getNamesSortedByFriendsCount = users => {
+//   const sortUsers = users;
+//   sortUsers.forEach(user => {
+//     const { friends } = user;
+//     const sortByLength = (a ,b) => a.friends.length - b.friends.length;
+//     sortUsers.sort(sortByLength);
+//   });
+//   const usersArr = sortUsers.map(user => user.name);
+//   return usersArr;
 // };
 
 // console.log(getNamesSortedByFriendsCount(users));
-// // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
+// [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 
-// TASK#10????????????
+// TASK#10
 
 // Получить массив всех умений всех пользователей (поле skills), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
 // const getSortedUniqueSkills = users => {
-//   // твой код
+//   const allSkills = users.reduce((skill, { skills }) => {
+//     skill = [...skill,...skills];
+//     return skill;
+//   }, []);
+//   allSkills.sort();
+//   console.log('allSkills :', allSkills);
+//   const allUniqueSkills = allSkills.filter((skill, idx) => allSkills.indexOf(skill) === idx);
+//   return allUniqueSkills;
 // };
 
 // console.log(getSortedUniqueSkills(users));
