@@ -535,8 +535,28 @@ import users from './users.js';
 // const checkBalanceEvery = (arr, balance) => arr.every(el => el.balance > balance);
 // console.log('checkBalance :', checkBalanceEvery(users, 1500));
 
-const arr =[1, 5, 4, 55, 4, 7];
-arr.sort((a, b) =>{
-  console.log(`${a} and ${b} a-b ${a - b}`);
-  return a - b;
-})
+// const arr =[1, 5, 4, 55, 4, 7];
+// arr.sort((a, b) =>{
+//   console.log(`${a} and ${b} a-b ${a - b}`);
+//   return a - b;
+// })
+
+const array = ['alex', 'andrey', 'max', 'jula', 'lisa', 'andrey'];
+
+// const uniqArr = [...new Set(array)];
+
+// const uniqArr = Array.from(new Set(array));
+
+// let debug = [];
+// const uniqArr = array.filter((item, ix) => {
+//   // debug.push({item, ix, indexOf: array.indexOf(item)});
+//   return ix === array.indexOf(item);
+// })
+
+// console.table(debug);
+
+// const uniqArr = array.reduce((uniq, item) => {
+//   return uniq.includes(item) ? uniq : [...uniq, item];
+// }, []);
+// console.log('uniqArr :', uniqArr);
+
