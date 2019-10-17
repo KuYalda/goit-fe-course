@@ -138,3 +138,62 @@ console.log(users);
 
 // console.log(getSortedUniqueSkills(users));
 // // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
+
+// TASK#10 another solution
+
+// const getSortedUniqueSkills = (arr) => {
+//   const skills = [];
+//   arr.forEach(element => {
+//     skills.push(...element.skills);
+//   });
+//   console.log('skills :', skills);
+//   const unique = [];
+//   skills.forEach(el => {
+//     !unique.includes(el) && unique.push(el);
+//   })
+// }
+
+// getSortedUniqueSkills(users);
+
+
+// const getSortedUniqueSkills = (arr) => {
+//   const unique = arr
+//   .reduce((acc, el) => {
+//     acc.push(...el.skills);
+//     return acc;
+//   }, [])
+//   .reduce((acc, el) => {
+//     // !acc.includes(el) && acc.push(el);
+//     // return acc;
+//     return !acc.includes(el) && acc.push(el) && acc || acc;
+//   }, [])
+//   .sort();
+//   console.log('unique :', unique);
+// }
+
+// getSortedUniqueSkills(users);
+
+// const summ = users.reduce((acc, el) => el.balance + acc, 0)
+// console.log('summ :', summ);
+
+// const updData = {
+//   title: null,
+//   cost: 2000,
+//   discription: '',
+//   size: undefined,
+//   price: 0,
+// };
+
+// const cleanData = (obj) => {
+//   return Object.keys(obj).reduce((acc, key) => {
+//     if(obj[key] || obj[key] === 0) {
+//       acc[key] = obj[key];
+//       return acc;
+//     }
+//     return acc;
+//   }, {});  
+// };
+
+// console.log('cleanData(updData) :', cleanData(updData));
+
+// // console.log('cleanData :', cleanData);

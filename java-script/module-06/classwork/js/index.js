@@ -515,3 +515,28 @@ import users from './users.js';
 
 // console.log('newArr :', newArr);
 
+// const getEachOther = (arr, friendName) => {
+//   // return arr.filter(el => el.friends.some(friend => friend.name === friendName));
+//   return arr.filter(el => {
+//     return el.friends.some(friend => {
+//       return friend.name === friendName;
+//     });
+//   });
+// };
+
+// console.log('getEachOther :', getEachOther(users, 'Cline Miller' ).map(el => el.name));
+
+// const checkBalance = (arr, balance) => arr.some(el => el.balance > balance);
+// console.log('checkBalance :', checkBalance(users, 3000));
+
+// const checkBalanceName = (arr, balance) => arr.filter(el => el.balance > balance);
+// console.log('checkBalance :', checkBalanceName(users, 3000).map(el => el.name));
+
+// const checkBalanceEvery = (arr, balance) => arr.every(el => el.balance > balance);
+// console.log('checkBalance :', checkBalanceEvery(users, 1500));
+
+const arr =[1, 5, 4, 55, 4, 7];
+arr.sort((a, b) =>{
+  console.log(`${a} and ${b} a-b ${a - b}`);
+  return a - b;
+})
