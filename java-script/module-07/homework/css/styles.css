@@ -1,0 +1,30 @@
+.our-gallery {
+  max-width: 1800px;
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  display: block;
+  max-width: 550px;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+h3 {
+  text-align: center;
+  font-size: 52px;
+  color: #f44336;
+}
