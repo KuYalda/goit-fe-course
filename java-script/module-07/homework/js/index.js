@@ -180,39 +180,39 @@
 // Каждый следующий div после первого, должен быть шире и выше предыдущего на 10px
 // Создай функцию destroyBoxes(), которая очищает div#boxes.
 
-const container = document.getElementById('boxes');
-let number = document.querySelector('input[type="number"]');
-let currentSize = 30;
+// const container = document.getElementById('boxes');
+// let number = document.querySelector('input[type="number"]');
+// let currentSize = 30;
 
-document.querySelector('button[data-action="render"]').addEventListener('click', createBoxes);
-document.querySelector('button[data-action="destroy"]').addEventListener('click', destroyBoxes);
+// document.querySelector('button[data-action="render"]').addEventListener('click', createBoxes);
+// document.querySelector('button[data-action="destroy"]').addEventListener('click', destroyBoxes);
 
 
-function createBoxes() {
-  container.innerHTML = '';
-  let num = number.valueAsNumber;
-  let rezult = '';
-  for(let i = 1; i <= num; i += 1) {
-    const el = document.createElement('div');
-    el.classList.add(`wrap-${i}`);
-    const r = Math.round(Math.random() * 100);
-    const g = Math.round(Math.random() * 100);
-    const b = Math.round(Math.random() * 100);
-    el.style.width = `${currentSize}px`;
-    el.style.height = `${currentSize}px`;
-    el.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;   
-    const text = el.outerHTML;
-    rezult = rezult + `${text}`;
-    currentSize += 10;
-  }
+// function createBoxes() {
+//   container.innerHTML = '';
+//   let num = number.valueAsNumber;
+//   let rezult = '';
+//   for(let i = 1; i <= num; i += 1) {
+//     const el = document.createElement('div');
+//     el.classList.add(`wrap-${i}`);
+//     const r = Math.round(Math.random() * 100);
+//     const g = Math.round(Math.random() * 100);
+//     const b = Math.round(Math.random() * 100);
+//     el.style.width = `${currentSize}px`;
+//     el.style.height = `${currentSize}px`;
+//     el.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;   
+//     const text = el.outerHTML;
+//     rezult = rezult + `${text}`;
+//     currentSize += 10;
+//   }
 
-  container.insertAdjacentHTML('beforeend', rezult);
-  currentSize = 30;
-  number.valueAsNumber = '';
-}
+//   container.insertAdjacentHTML('beforeend', rezult);
+//   currentSize = 30;
+//   number.valueAsNumber = '';
+// }
 
-function destroyBoxes() {
-  container.innerHTML = '';
-  currentSize = 30;
-  number.valueAsNumber = '';
-}
+// function destroyBoxes() {
+//   container.innerHTML = '';
+//   currentSize = 30;
+//   number.valueAsNumber = '';
+// }
