@@ -31,18 +31,29 @@ function createGallery(arrImage) {
 
 createGallery(gallery);
 
-
+const modalLightbox = document.querySelector('.lightbox');
+const modalImg = document.querySelector('.lightbox___image');
 
 galleryBox.addEventListener('click', (e) => {
-  const modalLightbox = document.querySelector('.lightbox');
-  const modalImg = document.querySelector('.lightbox___image');
   if(e.target.nodeName === 'IMG') {
     modalLightbox.classList.add('is-open');
     modalImg.setAttribute('src', e.target.dataset.source);
     modalImg.setAttribute('alt', e.target.getAttribute('alt'));
   }
-  const closeButton = document.querySelector('.lightbox__button');
-  
-  console.dir(closeButton);
 
+  window.addEventListener('keydown', (e) => {
+    if(e.keyCode === 27) {
+      modalLightbox.classList.remove('is-open');
+      modalImg.setAttribute('src', '');
+      modalImg.setAttribute('alt', '');
+      }
+  })
+});
+
+modalLightbox.addEventListener('click', (e) => {
+  if(e.target !== modalImg) {
+    modalLightbox.classList.remove('is-open');
+    modalImg.setAttribute('src', '');
+    modalImg.setAttribute('alt', '');
+  }
 });
