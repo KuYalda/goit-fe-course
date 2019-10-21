@@ -43,26 +43,41 @@ modalWrapper.addEventListener('click', (e) => {
 
 
 url.addEventListener('click', (e) => {
-  console.log('e.target', e.target);
-  console.log('e.currentTarget', e.currentTarget);
-  // console.log('e.target.nodeName', e.target.nodeName);
+  // console.log('e.target', e.target);
+  // console.log('e.currentTarget', e.currentTarget);
+  // // console.log('e.target.nodeName', e.target.nodeName);
   // console.log('e.target.parentNode', e.target.parentNode)
 
   if(
     e.target.nodeName === 'BUTTON' && 
-    e.target.dataset.action === 'DEL') {
+    e.target.dataset.action === 'DEL'
+    ) {
       e.target.closest('.users__item').remove();
-  } else if(e.target.nodeName === 'LI') {
+    } else if(e.target !== e.currentTarget) //if(e.target.nodeName === 'LI') 
+  {
+    let discription;
     // alert('this is LI')
-    modalWrapper.classList.add('active');
-    const discription = e.target.dataset.modal;
+    if(e.target.nodeName !== 'LI') {
+      discription = e.target
+        .closest('.users__item').dataset.modal;
+    } else {
+      discription = e.target.dataset.modal;
+    }
     modalTitle.textContent = discription;
+    modalWrapper.classList.add('active');
   }
 });
 
-
+window.addEventListener('keydown', (e) => {
+  // console.log(e.keyCode);
+  // console.log(e);
+  if(e.keyCode === 27 
+    && modalWrapper.classList.contains('active')) 
+    {
+    modalWrapper.classList.toggle('active');
+    }
+})
 
 // console.log(
 //   url.contains(document.querySelector('.users__item'))
 // );
-
