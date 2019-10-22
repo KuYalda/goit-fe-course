@@ -8,3 +8,4 @@ tsync
 /gulp
 /testgulp
 **/gulp-starter-kit
+**/node_modules
