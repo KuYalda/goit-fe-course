@@ -195,9 +195,9 @@
 //   for(let i = 1; i <= num; i += 1) {
 //     const el = document.createElement('div');
 //     el.classList.add(`wrap-${i}`);
-//     const r = Math.round(Math.random() * 100);
-//     const g = Math.round(Math.random() * 100);
-//     const b = Math.round(Math.random() * 100);
+//     const r = Math.round(Math.random() * 256); ///разброс значений до 255
+//     const g = Math.round(Math.random() * 256); ///разброс значений до 255
+//     const b = Math.round(Math.random() * 256); ///разброс значений до 255
 //     el.style.width = `${currentSize}px`;
 //     el.style.height = `${currentSize}px`;
 //     el.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;   
