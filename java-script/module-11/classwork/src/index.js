@@ -20,16 +20,31 @@ import './styles.css';
 //   clearInterval(timerId);
 // }, 4000);
 
-const myPromis = new Promise((resolve, reject) => {
-  if (true) {
-    resolve("it's true");
-  } else {
-    reject("it's false");
-  }
-});
+// const myPromis = new Promise((resolve, reject) => {
+//   if (true) {
+//     resolve("it's true");
+//   } else {
+//     reject("it's false");
+//   }
+// });
 
 // console.dir(myPromis);
 // console.dir(Promise);
 // console.dir(document);
 
-console.dir(document.styleSheets[0]);
+// console.dir(document.styleSheets[0]);
+
+// console.log('First');
+// console.log('Second');
+// console.log('Third');
+
+// выполнится первым
+console.log('First');
+
+setTimeout(() => {
+  // выполнится третьим, спустя 2 секунды
+  console.log('Second');
+}, 2000);
+
+// выполнится вторым
+console.log('Third');
