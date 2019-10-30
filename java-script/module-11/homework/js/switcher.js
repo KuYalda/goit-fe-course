@@ -23,13 +23,8 @@ const refs = {
 };
 
 const switcher = {
-  isOn: false,
   changeColor() {
-    if (this.isOn) {
-      return;
-    }
-
-    this.isOn = true;
+    refs.startBtn.setAttribute('disabled', 'true');
 
     this.changeBgc = setInterval(() => {
       const currentColor = getColor(colors, randomIntegerFromInterval);
@@ -39,8 +34,8 @@ const switcher = {
   },
 
   stopDisco() {
+    refs.startBtn.removeAttribute('disabled');
     clearInterval(this.changeBgc);
-    this.isOn = false;
   },
 };
 
