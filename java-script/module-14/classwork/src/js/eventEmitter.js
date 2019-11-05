@@ -16,11 +16,11 @@ class EventEmitter {
 
     this.events[type] = this.events[type].filter(el => el !== callBack);
   }
-  emit(type) {
+  emit(type, data) {
     if (!this.events[type]) return;
 
     this.events[type].forEach(cb => {
-      cb();
+      cb(data);
     });
   }
 }
