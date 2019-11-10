@@ -1,0 +1,16 @@
+img{
+  display: block;
+}
+
+.gallery {
+  width: 1600px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
