@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.js": "/goit-fe-course/static/js/main.8337572f.chunk.js",
-    "main.js.map": "/goit-fe-course/static/js/main.8337572f.chunk.js.map",
-    "runtime-main.js": "/goit-fe-course/static/js/runtime-main.37d7a590.js",
-    "runtime-main.js.map": "/goit-fe-course/static/js/runtime-main.37d7a590.js.map",
-    "static/js/2.bebb05e0.chunk.js": "/goit-fe-course/static/js/2.bebb05e0.chunk.js",
-    "static/js/2.bebb05e0.chunk.js.map": "/goit-fe-course/static/js/2.bebb05e0.chunk.js.map",
-    "index.html": "/goit-fe-course/index.html",
-    "precache-manifest.5df90eca5fd4cbe1dfd1fa3ba39e91eb.js": "/goit-fe-course/precache-manifest.5df90eca5fd4cbe1dfd1fa3ba39e91eb.js",
-    "service-worker.js": "/goit-fe-course/service-worker.js"
+    "main.css": "/goit-fe-course/react/static/css/main.31739af7.chunk.css",
+    "main.js": "/goit-fe-course/react/static/js/main.eb1456d1.chunk.js",
+    "main.js.map": "/goit-fe-course/react/static/js/main.eb1456d1.chunk.js.map",
+    "runtime-main.js": "/goit-fe-course/react/static/js/runtime-main.59d69131.js",
+    "runtime-main.js.map": "/goit-fe-course/react/static/js/runtime-main.59d69131.js.map",
+    "static/js/2.94d792f8.chunk.js": "/goit-fe-course/react/static/js/2.94d792f8.chunk.js",
+    "static/js/2.94d792f8.chunk.js.map": "/goit-fe-course/react/static/js/2.94d792f8.chunk.js.map",
+    "index.html": "/goit-fe-course/react/index.html",
+    "precache-manifest.02f0b0dd4f7cde56a1bbbc53dd6c5b8f.js": "/goit-fe-course/react/precache-manifest.02f0b0dd4f7cde56a1bbbc53dd6c5b8f.js",
+    "service-worker.js": "/goit-fe-course/react/service-worker.js",
+    "static/css/main.31739af7.chunk.css.map": "/goit-fe-course/react/static/css/main.31739af7.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.37d7a590.js",
-    "static/js/2.bebb05e0.chunk.js",
-    "static/js/main.8337572f.chunk.js"
+    "static/js/runtime-main.59d69131.js",
+    "static/js/2.94d792f8.chunk.js",
+    "static/css/main.31739af7.chunk.css",
+    "static/js/main.eb1456d1.chunk.js"
   ]
 }
