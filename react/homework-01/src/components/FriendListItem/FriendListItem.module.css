@@ -1,0 +1,27 @@
+.item {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.status {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: 40px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.active {
+  composes: status;
+  background-color: green;
+}
+
+.avatar {
+  margin-right: 30px;
+}
+
+.name {
+  display: block;
+  margin-top: 40px;
+}
