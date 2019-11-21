@@ -24,14 +24,8 @@
   pointer-events: none;
   background-color: #bdbdbd;
 }
-/* 
-.button:hover {
-  composes: button;
-  background-color: #1f65d6;
-};
 
-
+.button:hover,
 .button:focus {
-  composes: button;
   background-color: #1f65d6;
-} */
+}
