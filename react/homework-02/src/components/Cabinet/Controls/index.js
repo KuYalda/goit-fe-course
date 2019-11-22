@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Controls = ({ operation }) => (
   <>
@@ -11,5 +12,9 @@ const Controls = ({ operation }) => (
     </button>
   </>
 );
+
+Controls.propTypes = {
+  operation: PropTypes.func,
+};
 
 export default Controls;

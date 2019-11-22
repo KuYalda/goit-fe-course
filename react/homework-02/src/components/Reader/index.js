@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Controls from '../Controls';
 import Counter from '../Counter';
 import Publication from '../Publication';
 import s from './Reader.module.css';
 
 export default class Reader extends Component {
+  static propTypes = PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string))
+    .isRequired;
   state = {
     idx: 0,
   };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TransactionHistory = ({ transactions }) =>
   transactions.map(el => (
@@ -8,5 +9,14 @@ const TransactionHistory = ({ transactions }) =>
       <td>{el.date}</td>
     </tr>
   ));
+
+TransactionHistory.propTypes = PropTypes.arrayOf(
+  PropTypes.shape({
+    id: PropTypes.string,
+    type: PropTypes.string,
+    date: PropTypes.string,
+    amount: PropTypes.number,
+  }).isRequired,
+);
 
 export default TransactionHistory;

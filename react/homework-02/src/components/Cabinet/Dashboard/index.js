@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import s from './Dashboard.module.css';
 import Controls from '../Controls';
 import Balance from '../Balance';
@@ -10,6 +11,17 @@ const shortid = require('shortid');
 toast.configure();
 
 export default class Dashboard extends Component {
+  static propTypes = {
+    balance: PropTypes.number,
+    transactions: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        type: PropTypes.string,
+        date: PropTypes.string,
+        amount: PropTypes.number,
+      }),
+    ),
+  };
   state = {
     transactions: [],
     balance: 0,
@@ -77,6 +89,7 @@ export default class Dashboard extends Component {
   };
 
   render() {
+    // console.log('Dashbord.props :', this.props);
     const { balance, transactions } = this.state;
     return (
       <div className={s.dashboard}>
