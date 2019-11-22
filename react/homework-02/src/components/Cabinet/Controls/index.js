@@ -15,6 +15,6 @@ const Controls = ({ operation }) => (
 
 Controls.propTypes = PropTypes.shape({
   operation: PropTypes.func,
-});
+}).isRequired;
 
 export default Controls;
