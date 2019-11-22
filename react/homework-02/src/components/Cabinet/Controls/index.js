@@ -13,8 +13,8 @@ const Controls = ({ operation }) => (
   </>
 );
 
-Controls.propTypes = {
+Controls.propTypes = PropTypes.shape({
   operation: PropTypes.func,
-};
+});
 
 export default Controls;
