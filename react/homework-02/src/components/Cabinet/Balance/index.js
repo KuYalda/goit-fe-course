@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Balance = ({ balance }) => (
-  // const {balance} = this.PaymentResponse;
+const Balance = ({ balance, deposit, withdraw }) => (
   <>
-    <span>⬆️2000$</span>
-    <span>⬇️1000$</span>
+    <span>⬆️{deposit}$</span>
+    <span>⬇️{withdraw}$</span>
     <span>Balance: {balance}$</span>
   </>
 );

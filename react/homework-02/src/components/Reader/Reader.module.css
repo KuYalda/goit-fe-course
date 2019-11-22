@@ -17,9 +17,3 @@
   background-color: #fff;
   box-shadow: 0 6px 28px 0 rgba(24, 52, 117, 0.2);
 }
-
-.controls {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 16px;
-}

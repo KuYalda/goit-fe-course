@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import s from './Dashboard.module.css';
 import Controls from '../Controls';
 import Balance from '../Balance';
 import TransactionHistory from '../TransactionHistory';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const shortid = require('shortid');
+
+toast.configure();
 
 export default class Dashboard extends Component {
   state = {
@@ -11,30 +16,61 @@ export default class Dashboard extends Component {
   };
 
   operation = e => {
-    const value = Number(e.target.parentElement.firstElementChild.value);
-    // console.log('value :', typeof value);
+    const value = e.target.parentElement.firstElementChild.value;
+    e.target.parentElement.firstElementChild.value = null;
     const depType = e.target.textContent;
     const newTransaction = {
       id: shortid.generate(),
       type: depType,
-      amount: value,
+      amount: Number(value),
       date: new Date().toLocaleString(),
     };
+    const toastSettings = {
+      position: 'top-center',
+      autoClose: 2500,
+      pauseOnHover: false,
+    };
+    const error = () =>
+      toast('На счету недостаточно средств для проведения операции!', {
+        ...toastSettings,
+        type: toast.TYPE.ERROR,
+      });
+    const warning = () =>
+      toast('Введите корректную сумму для проведения операции!', {
+        ...toastSettings,
+        type: toast.TYPE.WARNING,
+      });
+
     this.setState(ps => {
       if (depType === 'Withdraw' && value > ps.balance) {
+        error();
         return {};
-      } else {
+      } else if (
+        (depType === 'Withdraw' || depType === 'Deposit') &&
+        value > 0
+      ) {
         return {
           transactions: [newTransaction, ...ps.transactions],
-          balance: this.changeBalance([newTransaction, ...ps.transactions]),
+          balance:
+            this.sumTransactionsOfType('Deposit', [
+              newTransaction,
+              ...ps.transactions,
+            ]) -
+            this.sumTransactionsOfType('Withdraw', [
+              newTransaction,
+              ...ps.transactions,
+            ]),
         };
+      } else {
+        warning();
+        return {};
       }
     });
   };
 
-  changeBalance = transactions => {
-    const value = transactions.reduce((acc, el) => {
-      el.type === 'Deposit' ? (acc += el.amount) : (acc -= el.amount);
+  sumTransactionsOfType = (type, arr) => {
+    const value = arr.reduce((acc, el) => {
+      el.type === type ? (acc += el.amount) : (acc += 0);
       return acc;
     }, 0);
     return value;
@@ -43,28 +79,32 @@ export default class Dashboard extends Component {
   render() {
     const { balance, transactions } = this.state;
     return (
-      <div>
-        <section className="">
+      <div className={s.dashboard}>
+        <section className={s.controls}>
           <Controls operation={this.operation} />
         </section>
-        <section className="">
-          <Balance balance={balance} />
+        <section className={s.controls}>
+          <Balance
+            balance={balance}
+            deposit={this.sumTransactionsOfType('Deposit', transactions)}
+            withdraw={this.sumTransactionsOfType('Withdraw', transactions)}
+          />
         </section>
         {transactions.length > 0 ? (
-          <table className="">
-            <thead>
+          <table className={s.table}>
+            <thead style={{ textAlign: 'center' }}>
               <tr>
                 <th>Transaction</th>
                 <th>Amount</th>
                 <th>Date</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className={s.table}>
               <TransactionHistory transactions={transactions} />
             </tbody>
           </table>
         ) : (
-          <p>No transactions</p>
+          <p style={{ textAlign: 'center' }}>You have no transactions</p>
         )}
       </div>
     );

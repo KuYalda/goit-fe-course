@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Controls extends Component {
-  state = {};
+const Controls = ({ operation }) => (
+  <>
+    <input type="number" min="0.01" name="amount" placeholder="0" />
+    <button onClick={operation} type="button" style={{ cursor: 'pointer' }}>
+      Deposit
+    </button>
+    <button onClick={operation} type="button" style={{ cursor: 'pointer' }}>
+      Withdraw
+    </button>
+  </>
+);
 
-  render() {
-    const { operation } = this.props;
-    return (
-      <>
-        <input type="number" name="amount" />
-        <button onClick={operation} type="button">
-          Deposit
-        </button>
-        <button onClick={operation} type="button">
-          Withdraw
-        </button>
-      </>
-    );
-  }
-}
+export default Controls;
