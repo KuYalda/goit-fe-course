@@ -2,21 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Controls.module.css';
 
-const Controls = ({ purpose, handNext, handlePrev, stop }) => (
+const Controls = ({ value, handleClick, stop }) => (
   <button
-    onClick={purpose === 'Вперед' ? handNext : handlePrev}
+    onClick={handleClick}
     type="button"
     className={!stop ? s.button : s.button_disabled}
   >
-    {purpose}
+    {value}
   </button>
 );
 
 Controls.propTypes = PropTypes.shape({
-  purpose: PropTypes.string,
+  value: PropTypes.string,
   stop: PropTypes.bool,
-  handNext: PropTypes.func,
-  handlePrev: PropTypes.func,
+  handleClick: PropTypes.func,
 }).isRequired;
 
 export default Controls;

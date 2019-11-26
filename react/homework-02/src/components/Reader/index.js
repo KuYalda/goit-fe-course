@@ -12,28 +12,12 @@ export default class Reader extends Component {
     idx: 0,
   };
 
-  nextArticle = () => {
-    this.setState(ps => {
-      const { items } = this.props;
-      if (ps.idx < items.length) {
-        return {
-          idx: ps.idx + 1,
-        };
-      }
-      return {};
-    });
+  handleClickPrev = () => {
+    this.setState(ps => ({ idx: ps.idx - 1 }));
   };
 
-  prevArticle = () => {
-    this.setState(ps => {
-      const { items } = this.props;
-      if (ps.idx < items.length) {
-        return {
-          idx: ps.idx - 1,
-        };
-      }
-      return {};
-    });
+  handleClickNext = () => {
+    this.setState(ps => ({ idx: ps.idx + 1 }));
   };
 
   render() {
@@ -44,16 +28,16 @@ export default class Reader extends Component {
       <div className={s.reader}>
         <section className={s.controls}>
           <Controls
-            handlePrev={this.prevArticle}
-            purpose="Назад"
+            handleClick={this.handleClickPrev}
             className={s.button}
             stop={idx === 0}
+            value="Назад"
           />
           <Controls
-            handNext={this.nextArticle}
-            purpose="Вперед"
+            handleClick={this.handleClickNext}
             className={s.button}
             stop={items.length === idx + 1}
+            value="Вперед"
           />
         </section>
         <Counter actualValue={idx + 1} maxValue={items.length} />
