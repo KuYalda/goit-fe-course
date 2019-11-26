@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Priority from '../../utils/priority';
 import PrioritySelector from '../PrioritySelector';
 import s from './TaskEditor.module.css';
 
 const options = Object.values(Priority);
 
+const INITIAL_STATE = {
+  text: '',
+  priority: Priority.LOW,
+};
+
 export default class TaskEditor extends Component {
-  state = {
-    text: '',
-    priority: Priority.LOW,
+  static propTypes = {
+    onAddTask: PropTypes.func.isRequired,
   };
+
+  state = { ...INITIAL_STATE };
 
   handleChange = e => {
     this.setState({
@@ -17,10 +24,18 @@ export default class TaskEditor extends Component {
     });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+
+    this.props.onAddTask({ ...this.state });
+
+    this.setState({ ...INITIAL_STATE });
+  };
+
   render() {
     const { priority, text } = this.state;
     return (
-      <form className={s.form}>
+      <form className={s.form} onSubmit={this.handleSubmit}>
         <input
           type="text"
           name="text"
@@ -42,3 +57,7 @@ export default class TaskEditor extends Component {
     );
   }
 }
+
+// TaskEditor.propTypes = {
+//   onAddTask: PropTypes.func.isRequired
+// }

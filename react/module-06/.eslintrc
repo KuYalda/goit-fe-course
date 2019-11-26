@@ -36,7 +36,7 @@
       "always",
       { "ignoreClassFields": true }
     ],
-    "react/prop-types": 0,
+    "react/prop-types": 1,
     "react/static-property-placement": [1, "static public field"],
     "react/state-in-constructor": [0, "never"],
     "react/sort-comp": [
