@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import s from './Searchbar.module.css';
 
@@ -29,8 +29,7 @@ const SearchBar = ({ onSubmit }) => {
           type="text"
           value={searchValue}
           name="seachValue"
-          // autoComplete="off"
-          // autoFocus
+          autoComplete="off"
           placeholder="Search images and photos"
           onChange={handleValueChange}
         />
@@ -39,8 +38,8 @@ const SearchBar = ({ onSubmit }) => {
   );
 };
 
-// SearchBar.propTypes = {
-//   onSubmit: PropTypes.func.isRequired,
-// };
+SearchBar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default SearchBar;
