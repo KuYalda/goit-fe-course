@@ -5,8 +5,8 @@ import s from './ImageGalleryItem.module.css';
 const ImageGalleryItem = ({ img, tags, modalImg, onClick }) => (
   <li className={s.ImageGalleryItem}>
     <img
-      src={img}
       alt={tags}
+      src={img}
       className={s.ImageGalleryItem_image}
       onClick={() => onClick(modalImg, tags)}
     />
