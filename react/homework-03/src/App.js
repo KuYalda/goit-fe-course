@@ -64,8 +64,8 @@ export default class App extends Component {
     this.getImages(searchQuery, page);
   };
 
-  onImgClick = ({ target }) => {
-    this.setState({ modalProps: { src: target.lowsrc, alt: target.alt } });
+  onImgClick = (src, alt) => {
+    this.setState({ modalProps: { src, alt } });
   };
 
   onModalClick = (target, element) => {
